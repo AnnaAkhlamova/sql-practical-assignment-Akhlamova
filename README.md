@@ -1,0 +1,1 @@
+# sql-practical-assignment-Akhlamova
