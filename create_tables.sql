@@ -5,10 +5,9 @@ USE hw1;
 CREATE TABLE movies (
     movie_id INT PRIMARY KEY,
     movie_name VARCHAR(50),
-    duration DECIMAL(4,1), 
-    rating DECIMAL(3,1)
+    duration DECIMAL(3,2), 
+    rated VARCHAR(10)
 );
-
 CREATE TABLE cinema_hall (
     hall_id INT PRIMARY KEY,
     hall_name VARCHAR(50),
@@ -34,7 +33,7 @@ CREATE TABLE tickets (
     client_id INT,
     movie_id INT,
     hall_id INT,
-    price DECIMAL(5,2),
+    price_dollars DECIMAL(5,2),
     FOREIGN KEY (client_id) REFERENCES clients(client_id),
     FOREIGN KEY (movie_id) REFERENCES movies(movie_id),
     FOREIGN KEY (hall_id) REFERENCES cinema_hall(hall_id)
