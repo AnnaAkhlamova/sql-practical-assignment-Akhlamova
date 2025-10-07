@@ -18,14 +18,15 @@ INSERT INTO workers VALUES
 (2, 3, "Allister", "ticket seller"),
 (3, 2, "Allen", "snack seller"),
 (4, 4, "Mariann", "assistant"),
-(5, 4, "Tiki-MIk", "ticket seller");
+(5, 5, "Tiki-MIk", "ticket seller");
 
 INSERT INTO clients VALUES
 (1, 'Nietzsche', 'nietzsche@email.com'),
 (2, 'Platon', 'platon@gmail.com'),
 (3, 'Schopenhauer', 'schopenhauer@gmail.com'),
 (4, 'Aristotel', 'aristotel@gmail.com'),
-(5, 'Bacon', 'bacon@gmail.com');
+(5, 'Bacon', 'bacon@gmail.com'),
+(6, 'Sokrat', 'sokrat@gmail.com');
 
 INSERT INTO tickets VALUES
 (1,2,4,3, 3.15),
@@ -34,8 +35,9 @@ INSERT INTO tickets VALUES
 (4,4,3,2, 4.3),
 (5,5,1,1, 5.0),
 (6,1,3,2, 4.3),
-(7,2,1,1, 5.0);
-
+(7,2,1,1, 5.0),
+(8,5,5,4, 2.6),
+(9,3,6,5, 6.3);
 
 SELECT * FROM clients;
 SELECT * FROM movies;
