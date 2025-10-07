@@ -33,7 +33,7 @@ UNION ALL
         NULL AS movie_name,
         NULL AS hall_name,
         NULL AS worker_name,
-        c.name AS client_name,
+        c.email AS client_email,
         NULL AS revenue,
         NULL AS total_tickets
     FROM clients c
