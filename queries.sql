@@ -30,12 +30,17 @@ LIMIT 5
 UNION ALL
 (
     SELECT 
-        NULL AS movie_name,
-        NULL AS hall_name,
-        NULL AS worker_name,
+        m.movie_name,
+        ch.hall_name,
+        w.name AS worker_name,
         c.email AS client_email,
-        NULL AS revenue,
-        NULL AS total_tickets
+        ms.revenue,
+        ms.total_tickets
     FROM clients c
+    LEFT JOIN tickets t ON c.client_id = t.client_id
+    LEFT JOIN movies m ON t.movie_id = m.movie_id
+    LEFT JOIN cinema_hall ch ON t.hall_id = ch.hall_id
+    LEFT JOIN workers w ON w.hall_id = ch.hall_id
+    LEFT JOIN movies_sales ms ON m.movie_id = ms.movie_id
     WHERE c.client_id NOT IN (SELECT client_id FROM tickets)
 );
